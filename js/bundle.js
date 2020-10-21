@@ -340,7 +340,7 @@ function forms(formsSelector, modalTimerId) {
             .then(data => {
                 console.log(data);
                 showThanksModal(message.success);
-                form.reset();
+                // form.reset();
                 statusMessage.remove();
             }).catch(() => {
                 showThanksModal(message.failure);
@@ -796,7 +796,7 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    const modalTimerId = setInterval(() => (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__.openModal)('.modal', modalTimerId), 300000);
+    const modalTimerId = setTimeout(() => (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__.openModal)('.modal', modalTimerId), 300000);
 
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_3__.default)('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__.default)('[data-modal]', '.modal', modalTimerId);
@@ -852,7 +852,7 @@ const postData = async (url, data) => {
     return await res.json();
 };
 
-async function getResource (url) {
+const getResource = async (url) => {
     let res = await fetch(url);
 
     if (!res.ok) {
@@ -860,7 +860,7 @@ async function getResource (url) {
     }
 
     return await res.json();
-}
+};
 
 
 

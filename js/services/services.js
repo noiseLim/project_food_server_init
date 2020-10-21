@@ -15,7 +15,7 @@ const postData = async (url, data) => {
     return await res.json();
 };
 
-async function getResource (url) {
+const getResource = async (url) => {
     let res = await fetch(url);
 
     if (!res.ok) {
@@ -23,7 +23,7 @@ async function getResource (url) {
     }
 
     return await res.json();
-}
+};
 
 export {postData};
 export {getResource};
