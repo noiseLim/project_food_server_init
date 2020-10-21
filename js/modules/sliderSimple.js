@@ -52,4 +52,4 @@ function sliderSimple() {
     });
 }
 
-module.exports = sliderSimple;
+export default sliderSimple;
