@@ -1,4 +1,4 @@
-function closeModal(modalSelector) {
+function closeModal (modalSelector) {
     const modal = document.querySelector(modalSelector);
 
     modal.classList.add('hide');
@@ -6,7 +6,7 @@ function closeModal(modalSelector) {
     document.body.style.overflow = '';
 }
 
-function openModal(modalSelector, modalTimerId) {
+function openModal (modalSelector, modalTimerId) {
     const modal = document.querySelector(modalSelector);
 
     modal.classList.add('show');
@@ -20,12 +20,11 @@ function openModal(modalSelector, modalTimerId) {
 }
 
 function modal(triggerSelector, modalSelector, modalTimerId) {
-
-    const modalTrigger = document.querySelectorAll(triggerSelector),
+    const modalContent = document.querySelectorAll(triggerSelector),
           modal = document.querySelector(modalSelector);
         //   modalClose = document.querySelector('[data-close]');
 
-    modalTrigger.forEach(btn => {
+    modalContent.forEach(btn => {
         btn.addEventListener('click', () => openModal(modalSelector, modalTimerId));
     });
     

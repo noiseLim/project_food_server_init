@@ -1,11 +1,8 @@
 import {closeModal, openModal} from './modal';
 import {postData} from '../services/services';
 
-function forms(formsSelector, modalTimerId) {
-    
-    // notificationModal
-
-    const forms = document.querySelectorAll(formsSelector);
+function forms(formSelector, modalTimerId) {
+    const forms = document.querySelectorAll(formSelector);
 
     const message = {
         loading: 'img/form/spinner.svg',
@@ -54,7 +51,7 @@ function forms(formsSelector, modalTimerId) {
             .then(data => {
                 console.log(data);
                 showThanksModal(message.success);
-                // form.reset();
+                form.reset();
                 statusMessage.remove();
             }).catch(() => {
                 showThanksModal(message.failure);
@@ -64,8 +61,6 @@ function forms(formsSelector, modalTimerId) {
 
         });
     }
-
-    // Modify modal
 
     function showThanksModal(message) {
         const prevModalDialog = document.querySelector('.modal__dialog');

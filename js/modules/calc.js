@@ -1,5 +1,4 @@
 function calc() {
-
     const result = document.querySelector('.calculating__result span');
 
     let sex, height, weight, age, ratio;
@@ -48,7 +47,7 @@ function calc() {
         } else {
             result.textContent = Math.round((88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age)) * ratio);
         }
-        
+         
     }
     calcTotal();
 

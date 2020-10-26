@@ -13,11 +13,5 @@
     "webpack": "^5.2.0",
     "webpack-cli": "^4.1.0"
   },
-<<<<<<< HEAD
   "dependencies": {}
-=======
-  "dependencies": {
-    "webpack": "^5.2.0"
-  }
->>>>>>> 1ff768c70300d7aa06f86be6bc505668f57eb80e
 }
